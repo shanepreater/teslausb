@@ -106,7 +106,7 @@ function wait_for_archive_to_be_reachable () {
       rm /tmp/archive_is_reachable
       break
     fi
-    sleep 1
+    sleep 10
   done
 }
 
@@ -126,7 +126,7 @@ function retry () {
       return
     fi
     log "Sleeping before retry..."
-    /bin/sleep 1
+    /bin/sleep 10
     attempts=$((attempts + 1))
     log "Retrying..."
   done
